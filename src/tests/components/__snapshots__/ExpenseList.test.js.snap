@@ -2,7 +2,6 @@
 
 exports[`should render ExpenseList with expenses 1`] = `
 <div>
-  <Connect(ExpenseListFilter) />
   <h1>
     Expense List
   </h1>
@@ -35,7 +34,6 @@ exports[`should render ExpenseList with expenses 1`] = `
 
 exports[`should render ExpenseList with no expenses 1`] = `
 <div>
-  <Connect(ExpenseListFilter) />
   <h1>
     Expense List
   </h1>
