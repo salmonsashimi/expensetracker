@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get, once, set, remove, update, onValue, push } from "firebase/database";
+import { initializeApp } from "@firebase/app";
+import { getDatabase, ref, get, once, set, remove, update, onValue, push } from "@firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {

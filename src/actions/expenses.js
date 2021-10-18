@@ -1,6 +1,6 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase';
-import { getDatabase, ref, set, remove, update, onValue, push } from "firebase/database";
+import { getDatabase, ref, set, remove, update, onValue, push } from "@firebase/database";
 
 
 // ADD_EXPENSE
