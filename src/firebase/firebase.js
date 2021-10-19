@@ -17,17 +17,9 @@ const app = initializeApp(firebaseConfig);
 
 const database = getDatabase(app);
 
-
-
-
-
-
-
-
-
-
-
 export default database;
+
+
 // push(ref(database, 'expenses'), {
 //     description: 'Gas Bill',
 //     amount: 30,
