@@ -21,3 +21,25 @@ exports[`should render EditExpensePage correctly 1`] = `
   </button>
 </div>
 `;
+
+exports[`should render editExpense page correctly 1`] = `
+<div>
+  <ExpenseForm
+    expense={
+      Object {
+        "amount": 100,
+        "createdAt": 500,
+        "description": "Dinner",
+        "id": "3",
+        "note": "Good date with wife",
+      }
+    }
+    onFormSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Remove Expense
+  </button>
+</div>
+`;

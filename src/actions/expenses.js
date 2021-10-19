@@ -36,7 +36,6 @@ export const removeExpense = (id) => ({
 
 export const startRemoveExpense = ({ id } = {}) => {
     return (dispatch) => {
-        console.log(id)
         return remove(ref(database, `expenses/${id}`)).then(() => {
             dispatch(removeExpense(id))
         })
@@ -49,6 +48,13 @@ export const editExpense = (id, edits) => ({
     id,
     edits
 })
+export const startEditExpense = (id, edits) => {
+    return (dispatch) => {
+        return update(ref(database, `expenses/${id}`), edits).then(() => {
+            dispatch(editExpense(id, edits))
+        })
+    }
+}
 
 // SET_EXPENSES
 export const setExpenses = (expenses) => ({
