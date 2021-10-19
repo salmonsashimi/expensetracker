@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ExpenseForm from '../../components/ExpenseForm';
-import expenseArray from '../fixtures/expenseArray';
+import expenses from '../fixtures/expenses';
 import moment from 'moment';
 
 test('should render empty ExpenseForm correctly', () => {
@@ -10,7 +10,7 @@ test('should render empty ExpenseForm correctly', () => {
 })
 
 test('should render ExpenseForm with expense data correctly', () => {
-    const wrapper = shallow(<ExpenseForm expense={expenseArray[0]} />)
+    const wrapper = shallow(<ExpenseForm expense={expenses[0]} />)
     expect(wrapper).toMatchSnapshot();
 })
 
@@ -59,14 +59,14 @@ test('should not set amount if invalid input', () => {
 
 test('should call onSubmit prop for valid form submission', () => {
     const onSubmitSpy = jest.fn();
-    const wrapper = shallow(<ExpenseForm onFormSubmit={onSubmitSpy} expense={expenseArray[0]} />);
+    const wrapper = shallow(<ExpenseForm onFormSubmit={onSubmitSpy} expense={expenses[0]} />);
     wrapper.find('form').simulate('submit', { preventDefault: () => { } });
     expect(wrapper.state('error')).toBe('');
     expect(onSubmitSpy).toHaveBeenCalledWith({
-        amount: expenseArray[0].amount,
-        createdAt: expenseArray[0].createdAt,
-        description: expenseArray[0].description,
-        note: expenseArray[0].note
+        amount: expenses[0].amount,
+        createdAt: expenses[0].createdAt,
+        description: expenses[0].description,
+        note: expenses[0].note
     })
 })
 

@@ -1,14 +1,14 @@
 import expenseTotal from '../../selectors/ExpenseTotal';
-import expenseArray from '../fixtures/expenseArray'
+import expenses from '../fixtures/expenses'
 
 test('Should correctly add up no expenseTotal', () => {
     expect(expenseTotal([])).toBe(0)
 })
 
 test('Should correctly add up one expenseTotal', () => {
-    expect(expenseTotal([expenseArray[1]])).toBe(1000)
+    expect(expenseTotal([expenses[1]])).toBe(1000)
 })
 
 test('should correctly add up all expenseTotal', () => {
-    expect(expenseTotal(expenseArray)).toBe(1600)
+    expect(expenseTotal(expenses)).toBe(1600)
 })

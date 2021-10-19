@@ -1,16 +1,16 @@
 import expenseReducer from '../../reducers/expenses';
-import expenseArray from '../fixtures/expenseArray';
+import expenses from '../fixtures/expenses';
 
 test('should return default expenses', () => {
     const action = { type: '@@INIT' }
-    const result = expenseReducer(expenseArray, action)
-    expect(result).toEqual(expenseArray);
+    const result = expenseReducer(expenses, action)
+    expect(result).toEqual(expenses);
 })
 
 test('should add new expense into empty state', () => {
-    const action = { type: 'ADD_EXPENSE', expense: expenseArray[0] }
+    const action = { type: 'ADD_EXPENSE', expense: expenses[0] }
     const result = expenseReducer(undefined, action)
-    expect(result[0]).toEqual(expenseArray[0])
+    expect(result[0]).toEqual(expenses[0])
 })
 
 test('should add new expense into existing state', () => {
@@ -21,15 +21,15 @@ test('should add new expense into existing state', () => {
         note: 'nice to eat'
     }
     const action = { type: 'ADD_EXPENSE', expense: newExpense }
-    const result = expenseReducer(expenseArray, action)
-    expect(result).toEqual([...expenseArray, newExpense])
+    const result = expenseReducer(expenses, action)
+    expect(result).toEqual([...expenses, newExpense])
 })
 
 test('should edit existing expense amount', () => {
     const action = {
-        type: 'EDIT_EXPENSE', id: expenseArray[0].id, edits: { amount: 5000 }
+        type: 'EDIT_EXPENSE', id: expenses[0].id, edits: { amount: 5000 }
     }
-    const result = expenseReducer(expenseArray, action);
+    const result = expenseReducer(expenses, action);
     expect(result[0].amount).toEqual(5000)
 })
 
@@ -37,18 +37,28 @@ test('should not existing expense amount with wrong id', () => {
     const action = {
         type: 'EDIT_EXPENSE', id: 100, edits: { amount: 5000 }
     }
-    const result = expenseReducer(expenseArray, action);
-    expect(result[0].amount).toEqual(expenseArray[0].amount)
+    const result = expenseReducer(expenses, action);
+    expect(result[0].amount).toEqual(expenses[0].amount)
 })
 
 test('should remove expense from expenses array', () => {
-    const action = { type: 'REMOVE_EXPENSE', id: expenseArray[2].id }
-    const result = expenseReducer(expenseArray, action)
-    expect(result).toEqual(expenseArray.splice(0, 2))
+    const action = { type: 'REMOVE_EXPENSE', id: expenses[2].id }
+    const result = expenseReducer(expenses, action)
+    expect(result).toEqual(expenses.splice(0, 2))
 })
 
 test('should not remove expense with wrong id', () => {
     const action = { type: 'REMOVE_EXPENSE', id: 100 }
-    const result = expenseReducer(expenseArray, action)
-    expect(result).toEqual(expenseArray)
+    const result = expenseReducer(expenses, action)
+    expect(result).toEqual(expenses)
+})
+
+test('should set expenses', () => {
+    const action = {
+        type: 'SET_EXPENSES',
+        expenses: [expenses[0]]
+    }
+
+    const state = expenseReducer(expenses, action);
+    expect(state).toEqual([expenses[0]])
 })

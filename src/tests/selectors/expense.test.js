@@ -1,5 +1,5 @@
 import selectExpenses from '../../selectors/expenses'
-import expenseArray from '../fixtures/expenseArray';
+import expenses from '../fixtures/expenses';
 
 
 test('should filter by text value', () => {
@@ -10,7 +10,7 @@ test('should filter by text value', () => {
         endDate: undefined
     }
 
-    expect(selectExpenses(expenseArray, filter)).toEqual([expenseArray[1], expenseArray[0]]);
+    expect(selectExpenses(expenses, filter)).toEqual([expenses[1], expenses[0]]);
 })
 
 test('should filter by startDate', () => {
@@ -21,7 +21,7 @@ test('should filter by startDate', () => {
         endDate: undefined
     }
 
-    expect(selectExpenses(expenseArray, filter)).toEqual([expenseArray[1], expenseArray[2]]);
+    expect(selectExpenses(expenses, filter)).toEqual([expenses[1], expenses[2]]);
 })
 
 test('should filter by endDate', () => {
@@ -32,7 +32,7 @@ test('should filter by endDate', () => {
         endDate: 501
     }
 
-    expect(selectExpenses(expenseArray, filter)).toEqual([expenseArray[2], expenseArray[0]]);
+    expect(selectExpenses(expenses, filter)).toEqual([expenses[2], expenses[0]]);
 })
 
 
@@ -44,8 +44,8 @@ test('should sort by date', () => {
         endDate: undefined
     }
 
-    const result = selectExpenses(expenseArray, filter);
-    expect(result).toEqual([expenseArray[1], expenseArray[2], expenseArray[0]])
+    const result = selectExpenses(expenses, filter);
+    expect(result).toEqual([expenses[1], expenses[2], expenses[0]])
 })
 
 test('should sort by amount', () => {
@@ -56,6 +56,6 @@ test('should sort by amount', () => {
         endDate: undefined
     }
 
-    const result = selectExpenses(expenseArray, filter);
-    expect(result).toEqual([expenseArray[1], expenseArray[0], expenseArray[2]])
+    const result = selectExpenses(expenses, filter);
+    expect(result).toEqual([expenses[1], expenses[0], expenses[2]])
 })

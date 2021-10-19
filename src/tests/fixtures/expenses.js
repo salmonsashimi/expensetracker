@@ -1,4 +1,4 @@
-const expenseArray = [{
+const expenses = [{
     id: '1',
     description: 'Water Bill',
     amount: 500,
@@ -19,5 +19,5 @@ const expenseArray = [{
     createdAt: 500
 }]
 
-export default expenseArray;
+export default expenses;
 
