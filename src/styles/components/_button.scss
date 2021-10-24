@@ -1,0 +1,14 @@
+.button {
+    background-color:$blue;
+    color: white;
+    padding: $m-size;
+    font-size: 1.8rem;
+    border: none;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.button:hover {
+    opacity: 1.0;
+    cursor: pointer;
+}
