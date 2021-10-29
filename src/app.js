@@ -9,6 +9,7 @@ import { login, logout } from './actions/auth';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
+import LoadingPage from './components/LoadingPage'
 
 const store = configureStore();
 
@@ -26,7 +27,7 @@ const renderApp = () => {
     }
 }
 
-ReactDOM.render(<p>loading...</p>, document.getElementById('app'));
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 const auth = getAuth();
 

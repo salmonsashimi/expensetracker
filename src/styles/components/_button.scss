@@ -4,11 +4,19 @@
     padding: $m-size;
     font-size: 1.8rem;
     border: none;
+    display: inline-block;
     font-weight: 300;
     opacity: 0.9;
+    text-decoration: none;
+    line-height: 1;
 }
 
 .button:hover {
     opacity: 1.0;
     cursor: pointer;
+}
+
+.button--remove {
+    @extend .button;
+    background-color: #888888;
 }

@@ -1,44 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseList with expenses 1`] = `
-<div>
-  <h1>
-    Expense List
-  </h1>
-  <ExpenseListItem
-    amount={500}
-    createdAt={0}
-    description="Water Bill"
-    id="1"
-    key="1"
-    note="bad day today"
-  />
-  <ExpenseListItem
-    amount={1000}
-    createdAt={1000}
-    description="Electricity bill"
-    id="2"
-    key="2"
-    note="Lower for next month"
-  />
-  <ExpenseListItem
-    amount={100}
-    createdAt={500}
-    description="Dinner"
-    id="3"
-    key="3"
-    note="Good date with wife"
-  />
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <ExpenseListItem
+      amount={500}
+      createdAt={0}
+      description="Water Bill"
+      id="1"
+      key="1"
+      note="bad day today"
+    />
+    <ExpenseListItem
+      amount={1000}
+      createdAt={1000}
+      description="Electricity bill"
+      id="2"
+      key="2"
+      note="Lower for next month"
+    />
+    <ExpenseListItem
+      amount={100}
+      createdAt={500}
+      description="Dinner"
+      id="3"
+      key="3"
+      note="Good date with wife"
+    />
+  </div>
 </div>
 `;
 
 exports[`should render ExpenseList with no expenses 1`] = `
-<div>
-  <h1>
-    Expense List
-  </h1>
-  <p>
-    No expenses
-  </p>
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No expenses
+      </span>
+    </div>
+  </div>
 </div>
 `;
