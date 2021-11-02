@@ -16,7 +16,7 @@ exports[`should render ExpenseForm with expense data correctly 1`] = `
   <input
     className="text-input"
     onChange={[Function]}
-    placeholder="amount"
+    placeholder="Amount"
     type="text"
     value={500}
   />
@@ -128,7 +128,7 @@ exports[`should render empty ExpenseForm correctly 1`] = `
   <input
     className="text-input"
     onChange={[Function]}
-    placeholder="amount"
+    placeholder="Amount"
     type="text"
     value=""
   />
@@ -240,7 +240,7 @@ exports[`should render error for invalid form submittion 1`] = `
   <input
     className="text-input"
     onChange={[Function]}
-    placeholder="amount"
+    placeholder="Amount"
     type="text"
     value=""
   />
@@ -357,7 +357,7 @@ exports[`should render error for invalid form submittion 2`] = `
   <input
     className="text-input"
     onChange={[Function]}
-    placeholder="amount"
+    placeholder="Amount"
     type="text"
     value=""
   />

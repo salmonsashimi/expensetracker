@@ -12,8 +12,10 @@ exports[`expect login page to render correctly 1`] = `
     >
       expensetracker
     </h1>
-    <p>
-      keep your expenses under control.
+    <p
+      className="box-layout__text"
+    >
+      Save money today, live better tomorrow.
     </p>
     <button
       className="button"

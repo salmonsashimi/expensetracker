@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: $s-size;
+    padding: $s-size 0;
 }
 
 .header__title {
@@ -18,8 +18,10 @@
     }
 }
 
-
-
 .header__button {
     background: none;
+}
+
+.header__logo {
+    font-style: italic;
 }

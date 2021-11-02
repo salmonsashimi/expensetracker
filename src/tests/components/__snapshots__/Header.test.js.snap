@@ -15,7 +15,9 @@ exports[`should render Header correctly 1`] = `
         className="header__title"
         to="/dashboard"
       >
-        <h1>
+        <h1
+          className="header__logo"
+        >
           expensetracker
         </h1>
       </Link>

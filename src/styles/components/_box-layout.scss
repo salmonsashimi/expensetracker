@@ -19,4 +19,9 @@
 .box-layout__title {
     margin: 0;
     line-height: 1;
+    font-style: italic;
+}
+
+.box-layout__text {
+    margin: $m-size 0;
 }
