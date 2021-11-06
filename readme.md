@@ -1,4 +1,5 @@
 # expensetracker: Keep track of your expenses
+![expensetracker](https://user-images.githubusercontent.com/77195746/140622010-ad6200ef-bebb-45b4-aa2f-f051196a2ef4.gif)
 
 [Visit live site](https://expensetracker-1.herokuapp.com/)
 
